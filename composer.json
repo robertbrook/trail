@@ -1,6 +1,5 @@
 {
   "require": {
-    "php": "^8.0.0",
-    "mcmic/gemini-server": "^0.4.0"
+    "php": "^8.0.0"
   }
 }

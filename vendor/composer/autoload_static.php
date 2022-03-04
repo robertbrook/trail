@@ -6,28 +6,6 @@ namespace Composer\Autoload;
 
 class ComposerStaticInitfa620ee607094999948028f766e48f94
 {
-    public static $prefixLengthsPsr4 = array (
-        'P' => 
-        array (
-            'Psr\\Log\\' => 8,
-        ),
-        'M' => 
-        array (
-            'MCMic\\Gemini\\' => 13,
-        ),
-    );
-
-    public static $prefixDirsPsr4 = array (
-        'Psr\\Log\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/psr/log/Psr/Log',
-        ),
-        'MCMic\\Gemini\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/mcmic/gemini-server/src',
-        ),
-    );
-
     public static $classMap = array (
         'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',
     );
@@ -35,8 +13,6 @@ class ComposerStaticInitfa620ee607094999948028f766e48f94
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInitfa620ee607094999948028f766e48f94::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInitfa620ee607094999948028f766e48f94::$prefixDirsPsr4;
             $loader->classMap = ComposerStaticInitfa620ee607094999948028f766e48f94::$classMap;
 
         }, null, ClassLoader::class);
